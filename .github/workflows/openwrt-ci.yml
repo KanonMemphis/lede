@@ -11,7 +11,7 @@ name: OpenWrt-CI
 
 on:
   release:
-    types: [published]
+    types: [released]
 
 jobs:
 
