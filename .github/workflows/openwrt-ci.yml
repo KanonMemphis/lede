@@ -10,8 +10,9 @@
 name: OpenWrt-CI
 
 on:
-  release:
-    types: [released]
+  push:
+    branches: 
+      - release
 
 jobs:
 
@@ -27,6 +28,8 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          ref: release
 
       - name: Space cleanup
         env:
